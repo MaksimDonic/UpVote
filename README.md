@@ -2,22 +2,12 @@
 
 ## Project setup
 ```
-npm install
+npm install -g @vue/cli
 ```
 
-### Compiles and hot-reloads for development
+### Open vue ui
 ```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Lints and fixes files
-```
-npm run lint
+vue ui
 ```
 
 ### Customize configuration
