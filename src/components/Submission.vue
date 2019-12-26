@@ -27,8 +27,11 @@
       <div class="media-right">
         <span class="icon is-small" v-on:click="upvote(submission.id)">
           <i class="fa fa-chevron-up"></i>
+            </span>
+          <span class="icon is-small" v-on:click="devote(submission.id)">
+           <i class="fa fa-chevron-down"></i> 
+          </span>
           <strong class="has-text-info">{{ submission.votes }}</strong>
-        </span>
       </div>
     </div>
 </template>
@@ -43,7 +46,13 @@ export default {
           return submission.id === id;
         });
          submission.votes++;
-      }
+      },
+      devote: function(id) {
+        let submission = this.submissions.find(function(submission) {
+          return submission.id === id;
+        });
+        submission.votes--;
+        alert("devoted");      }
     }
 }
 </script>
